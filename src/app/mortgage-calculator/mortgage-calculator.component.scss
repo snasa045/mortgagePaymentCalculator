@@ -1,0 +1,149 @@
+@import "../../assets/sass/configs/colors";
+
+.global__mortgageCalculator__page {
+    display: flex;
+
+    .illustration__section-container{
+        padding: 3.125rem 0; //50px 0;
+        flex: 1.5;
+        text-align: center;
+        // background: transparent url(../assets/desktop/images/getStarted/background-pattern.svg) center repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 75%;
+        }
+    }
+
+    .mortgageCalculator__form__section-container{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+
+        .mortgageCalculator__form-wrapper{
+            width: 30vw;
+
+            .global__header1{
+                color: var(--blue-primary);
+                font-size: 2.625rem; //42px;
+                margin-bottom: 1.875rem; //30px;
+            }
+
+            .mortgageCalculator__form-text{
+                margin-bottom: 1rem; //16px;
+                color: var(--grey-1);
+            }
+
+
+            .form__container{
+                .form{
+                    display: flex;
+                    flex-direction: column;
+
+                    .form-element{
+                        margin: 0.625rem 0; //10px 0;
+
+                        .school_spinner{
+                            width: 30px !important;
+                            height: 30px !important;
+                            position: absolute;
+                            right: 0;
+                            top: -5px;
+
+                            svg {
+                                width: 30px !important;
+                                height: 30px !important;
+
+                                circle {
+                                    stroke: var(--blue-primary);
+                                }
+                            }
+                        }
+
+                        &.privacy-element{
+                            display: flex;
+
+                            span{
+                                font-size: 12px;
+                                line-height: 22px;
+
+                                .global__link{
+                                    font-size: 12px;
+                                    line-height: 22px;
+
+                                }
+                            }
+                        }
+
+                        &.submit-button-element {
+                            .global__button{
+                                display: table;
+                                font-weight: 600;
+                                text-decoration: none;
+                                font-size: 1rem;
+                                line-height: 25px;
+                                padding: 15px 45px;
+                                width: -webkit-max-content;
+                                width: -moz-max-content;
+                                width: max-content;
+                                cursor: pointer;
+                                transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+                                text-align: center;
+                                margin: 0.9375rem 0;
+                                box-shadow: none;
+                                border-radius: 15px;
+
+                                &.enable-button{
+                                    background: var(--blue-primary);
+                                    color: var(--white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Responsive styles
+    @media screen and (max-width: 992px) {
+        .illustration__section-container{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+
+            img{
+                max-width: 90%;
+            }
+        }
+
+        .getStarted__form__section-container{
+            width: 50%;
+
+            .getStarted__form-wrapper{
+                width: 85%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .illustration__section-container {
+            display: none;
+        }
+
+        .getStarted__form__section-container{
+            width: 100%;
+            // padding: 1.875rem 0; //30px 0;
+
+            .getStarted__form-wrapper{
+                width: 80%;
+            }
+        }
+    }
+}

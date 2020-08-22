@@ -1,0 +1,17 @@
+
+<div class="modal-body result-modal-body">
+  <section class="calculated_payment_section">
+    <p>Your Payment will be:</p>
+    <p>{{mortgagePayment().toFixed(2) | currency}}</p>
+  </section>
+  <section class="mortgage_details-section">
+    <h2>Your Mortgage Details</h2>
+    <div class="mortgage_details-wrapper">
+      <section class="mortgage_detail-item" *ngFor="let data of finalData">
+        <strong>{{ data.name }}</strong>
+        <span>{{ data.value }}</span>
+      </section>
+    </div>
+  </section>
+  <button type="button" class="close_button" (click)="close()">Close</button>
+</div>

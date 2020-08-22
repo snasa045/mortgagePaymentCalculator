@@ -1,0 +1,130 @@
+// for css variables
+
+$vars: (
+  /*- primary blue -*/
+  blue-primary: #006AC3,
+
+  /*- yellow -*/
+  yellow-primary: #fedf01,
+
+  /*- success -*/
+  green-success: #03883B,
+
+  /*- error -*/
+  red-error: #AF3C43,
+
+   /*- warning -*/
+   orange-warning: #C05800,
+
+    /*- grey -*/
+  grey-1: #384042,
+  grey-2: #5A5C5F,
+  grey-3: #c2c5cc,
+  grey-4: #E4E5E7,
+  grey-5: #F8F8F8,
+
+  /*- white -*/
+  white: #FFFFFF,
+
+  /*- link -*/
+  link_default: #2B4380,
+  link_hover: #0535D2,
+  link_visited:  #7834BC
+);
+
+body {
+    --primary: #{map-get($vars, primary)};
+  }
+
+//For Sass Variables
+
+    /*- blue -*/
+    $blue-primary: #006AC3;
+
+    /*- yellow -*/
+    $yellow-primary: #fedf01;
+
+    /*- success -*/
+    $green-success: #03883B;
+
+    /*- error -*/
+    $red-error: #AF3C43;
+
+     /*- warning -*/
+     $orange-warning: #C05800;
+
+      /*- grey -*/
+    $grey-1: #384042;
+    $grey-2: #5A5C5F;
+    $grey-3: #c2c5cc;
+    $grey-4: #E4E5E7;
+    $grey-5: #F8F8F8;
+
+    /*- white -*/
+    $white: #FFFFFF;
+
+    /*- link -*/
+    $link_default: #2B4380;
+    $link_hover: #0535D2;
+    $link_visited:  #7834BC;
+
+
+
+// CSS variables
+:root {
+  // Main Brand Colours
+
+  /*- blue -*/
+  --blue-primary: #006AC3;
+
+  /*- yellow -*/
+  --yellow-primary: #fedf01;
+
+  /*- success -*/
+  --green-success: #03883B;
+
+  /*- error -*/
+  --red-error: #AF3C43;
+
+   /*- warning -*/
+   --orange-warning: #C05800;
+
+    /*- grey -*/
+  --grey-1: #384042;
+  --grey-2: #5A5C5F;
+  --grey-3: #c2c5cc;
+  --grey-4: #E4E5E7;
+  --grey-5: #F8F8F8;
+
+  /*- white -*/
+  --white: #FFFFFF;
+
+  /*- link -*/
+  --link_default: #2B4380;
+  --link_hover: #0535D2;
+  --link_visited:  #7834BC;
+
+}
+
+.color--brand1 {
+    color: var(--blue-primary);
+}
+
+.background-color--brand1 {
+  background-color: var(--blue-primary);
+}
+
+.color--brand2 {
+  color: var(--yellow-primary);
+}
+
+.background-color--brand2 {
+  background-color: var(--yellow-primary);
+}
+
+.color--background--white {
+    background-color: var(--white);
+}
+
+
+

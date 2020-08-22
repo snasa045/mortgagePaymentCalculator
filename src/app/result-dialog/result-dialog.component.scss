@@ -1,0 +1,78 @@
+@import "../../assets/sass/configs/colors";
+.result-modal-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  .calculated_payment_section{
+    background-color: var(--blue-primary);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+
+    p{
+      &:first-child {
+        font-size: 1.1rem;
+      }
+
+      &:last-child {
+        font-size: 2.5rem;
+        padding: 1rem 0;
+        margin: 0;
+      }
+    }
+  }
+
+  .mortgage_details-section{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+    }
+
+    .mortgage_details-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .mortgage_detail-item {
+        padding: 8px 0;
+        font-size: 1rem;
+        display: flex;
+        min-width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        strong{
+          min-width: 200px;
+        }
+      }
+    }
+  }
+
+  .close_button{
+    margin: 0 2rem 1rem 2rem;
+    background-color: var(--yellow-primary);
+    border: none;
+    color: darken($blue-primary, 10%);
+    margin-left: auto;
+    display: table;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 25px;
+    padding: 15px 45px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    text-align: center;
+    box-shadow: none;
+    border-radius: 15px;
+  }
+}

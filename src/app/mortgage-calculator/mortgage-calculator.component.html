@@ -1,0 +1,73 @@
+<div class="global__mortgageCalculator__page">
+  <section class="illustration__section-container">
+    <img src="../../assets/images/undraw_Calculator_0evy.svg" alt="illustration" aria-hidden="true">
+  </section>
+
+  <section class="mortgageCalculator__form__section-container">
+    <div class="mortgageCalculator__form-wrapper">
+      <h1 class="global__header1">Mortgage Payment Calculator</h1>
+      <p class="mortgageCalculator__form-text">Quickly See What Your Mortgage Payments Might Look Like</p>
+
+      <div class="form__container" novalidate>
+        <form [formGroup]="formGroup" (ngSubmit)="onSave()" class="form">
+
+          <!-- Mortgage Amount -->
+          <mat-form-field appearance="fill" class="form-element mortgage-amount">
+            <mat-label>Mortgage Amount</mat-label>
+            <span matPrefix>$&nbsp;</span>
+            <input matInput formControlName="mortgageAmount" required type="number">
+            <mat-error *ngIf="!formGroup.controls['mortgageAmount'].valid && formGroup.controls['mortgageAmount'].touched">
+              {{ titleAlert }}
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Amortization Periodyears -->
+          <mat-form-field appearance="fill" class="form-element student-status-element">
+            <mat-label>Amortization Periodyears</mat-label>
+            <mat-select formControlName="amortizationPeriod">
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let amortizationPeriod of amortizationPeriods" [value]="amortizationPeriod.value">
+                {{ amortizationPeriod.type }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- Payment Frequency -->
+          <mat-form-field appearance="fill" class="form-element student-status-element">
+            <mat-label>Payment Frequency</mat-label>
+            <mat-select formControlName="paymentFrequency">
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let paymentFrequency of paymentFrequencies" [value]="paymentFrequency.value">
+                {{ paymentFrequency.type }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- Interest Rate: -->
+          <mat-form-field appearance="fill" class="form-element first-name">
+            <mat-label>Interest Rate</mat-label>
+            <span matPrefix>%&nbsp;</span>
+            <input matInput formControlName="interestRate" required>
+            <mat-error *ngIf="!formGroup.controls['interestRate'].valid && formGroup.controls['interestRate'].touched">
+              {{ titleAlert }}
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Privacy check-box -->
+          <!-- <div class="form-element privacy-element">
+            <mat-checkbox formControlName="agreeToTerm" [(ngModel)] ="privacyPolicyRead" [checked] = "privacyPolicyRead" class="privacy-element-checkbox"><span class="sr-only">Checkbox</span></mat-checkbox>
+            <span>AGREEMENT_DESC_WEB <a class="global__link" type="link" (click)="openDialog()" tabindex="0" (keyup.enter)="openDialog()"> PRIVACY </a> </span>
+          </div> -->
+
+          <!-- Complete set up button -->
+          <div class="form-element submit-button-element">
+            <button mat-raised-button  type="submit" class="button global__button" [ngClass] = " formGroup.valid ? 'enable-button' : 'disable-button' " [disabled]="!formGroup.valid">Calculate</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+</div>
+
