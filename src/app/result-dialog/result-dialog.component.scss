@@ -21,6 +21,7 @@
         font-size: 2.5rem;
         padding: 1rem 0;
         margin: 0;
+        letter-spacing: 1px;
       }
     }
   }
@@ -37,14 +38,15 @@
     .mortgage_details-wrapper{
       display: flex;
       flex-direction: column;
-      align-items: center;
+      width: 50%;
+      margin: auto;
 
       .mortgage_detail-item {
         padding: 8px 0;
         font-size: 1rem;
         display: flex;
         min-width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
 
         strong{
@@ -74,5 +76,25 @@
     text-align: center;
     box-shadow: none;
     border-radius: 15px;
+  }
+
+  @media screen and (max-width: 640px) {
+    .mortgage_details-section {
+      padding: 1rem;
+      .mortgage_details-wrapper{
+        width: 100%;
+        .mortgage_detail-item{
+          justify-content: flex-start;
+
+          strong {
+            margin: 5px 0;
+          }
+
+          span {
+            min-width: 100px;
+          }
+        }
+      }
+    }
   }
 }

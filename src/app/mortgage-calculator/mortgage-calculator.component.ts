@@ -48,17 +48,7 @@ export class MortgageCalculatorComponent implements OnInit {
       amortizationPeriod: [25],
       paymentFrequency: [12],
       interestRate: [5, Validators.required],
-      // 'phone': ['', [Validators.required, SimplePhoneNumberValidator.validPhoneNumber]],
-      // agreeToTerm: ['', [Validators.requiredTrue]],
     });
-  }
-
-  get name() {
-    return this.formGroup.get(['firstname', 'lastname']) as FormControl;
-  }
-
-  get phone() {
-    return this.formGroup.get('phone') as FormControl;
   }
 
   //openResultDialog function
@@ -77,22 +67,10 @@ export class MortgageCalculatorComponent implements OnInit {
     });
   }
 
-  public onSave() {
+  // open result dialog on
+  public onCalculate(): void {
     if (this.formGroup.valid) {
-      console.log(this.formGroup.value);
       this.openResultDialog();
-      // this.BindCurrentFieldsToProfile().then(prof => {
-      //   // console.log(prof);
-      //   this.profileDataService.updateProfile(prof);
-      //   this.profileDataService.saveProfile().then(()=> {
-      //     this.onProfileSaved();
-      //     this.router.navigate(["/explore"], { replaceUrl: true });
-      //     this.desktopService.setLoggedIn(true);
-      //   }).catch(err => {
-      //     console.log(err);
-      //   })
-      // })
     }
-
   }
 }

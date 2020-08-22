@@ -7,7 +7,6 @@
         padding: 3.125rem 0; //50px 0;
         flex: 1.5;
         text-align: center;
-        // background: transparent url(../assets/desktop/images/getStarted/background-pattern.svg) center repeat;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,6 +22,7 @@
         justify-content: center;
         align-items: center;
         margin: 2rem 0;
+        background-color: var(--white);
 
         .mortgageCalculator__form-wrapper{
             width: 30vw;
@@ -31,6 +31,8 @@
                 color: var(--blue-primary);
                 font-size: 2.625rem; //42px;
                 margin-bottom: 1.875rem; //30px;
+                line-height: 130%;
+                font-weight: 600;
             }
 
             .mortgageCalculator__form-text{
@@ -47,39 +49,7 @@
                     .form-element{
                         margin: 0.625rem 0; //10px 0;
 
-                        .school_spinner{
-                            width: 30px !important;
-                            height: 30px !important;
-                            position: absolute;
-                            right: 0;
-                            top: -5px;
-
-                            svg {
-                                width: 30px !important;
-                                height: 30px !important;
-
-                                circle {
-                                    stroke: var(--blue-primary);
-                                }
-                            }
-                        }
-
-                        &.privacy-element{
-                            display: flex;
-
-                            span{
-                                font-size: 12px;
-                                line-height: 22px;
-
-                                .global__link{
-                                    font-size: 12px;
-                                    line-height: 22px;
-
-                                }
-                            }
-                        }
-
-                        &.submit-button-element {
+                        &.calculate-button-element {
                             .global__button{
                                 display: table;
                                 font-weight: 600;
@@ -123,10 +93,10 @@
             }
         }
 
-        .getStarted__form__section-container{
+        .mortgageCalculator__form__section-container{
             width: 50%;
 
-            .getStarted__form-wrapper{
+            .mortgageCalculator__form-wrapper{
                 width: 85%;
             }
         }
@@ -137,11 +107,11 @@
             display: none;
         }
 
-        .getStarted__form__section-container{
+        .mortgageCalculator__form__section-container{
             width: 100%;
             // padding: 1.875rem 0; //30px 0;
 
-            .getStarted__form-wrapper{
+            .mortgageCalculator__form-wrapper{
                 width: 80%;
             }
         }
