@@ -16,7 +16,11 @@ export interface ResultDialogData {
   styleUrls: ['./result-dialog.component.scss']
 })
 
-// reference formula for monthly mortgage rate = "M = P[i(1+i)^n]/[(1+i)^n -1]"
+// r = the monthly interest rate
+// P = the amount borrowed, known as the loan's principal.
+// c = monthly payment
+// reference formula for monthly payment = "c = P[r(1+r)^n]/[(1+r)^n -1]"
+// https://en.wikipedia.org/wiki/Mortgage_calculator
 
 export class ResultDialogComponent implements OnInit {
 

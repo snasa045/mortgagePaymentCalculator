@@ -1,6 +1,37 @@
 # MortgageCalculator
 
+View the hosted solution: <a href='https://mortgagepaymentcalculatorbysid.web.app/'>https://mortgagepaymentcalculatorbysid.web.app/ [(Demo)](https://mortgagepaymentcalculatorbysid.web.app/ )</a>
+<br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+
+## Inspirations:
+<ul>
+  <li><a href="https://itools-ioutils.fcac-acfc.gc.ca/MC-CH/MCCalc-CHCalc-eng.aspx">Mortgage Calculator from Government of Canada</a></li>
+  <li><a href="https://apps.royalbank.com/apps/mortgages/mortgage-payment-calculator/">Mortgage Calculator from Royal Bank of Canada</a></li>
+ </ul>
+ 
+ ## Formula
+ 
+<p>r = the monthly interest rate</p>
+<p>P = the amount borrowed, known as the loan's principal</p>
+<p>c = monthly payment</p>
+<p>reference formula for monthly payment = "c = P[r(1+r)^n]/[(1+r)^n -1]"</p>
+<p><a href="https://en.wikipedia.org/wiki/Mortgage_calculator">https://en.wikipedia.org/wiki/Mortgage_calculator (Document)</a></p>
+<img src="src/assets/images/mortgage_formula.png" alt="logo" aria-hidden="true">
+
+## Things I considered while solving this problem
+
+<ul>
+  <li>Basic functionality of the mortgage calculator.</li>
+  <li>Branding of the RBC</li>
+  <li>Mobile, tablet responsive</li>
+  <li>Accessibility of the calculator (WCAG 2.1 AA / AODA) guideline</li>
+  <li>Keyboard accessible</li>
+  <li>Test cases for the input field</li>
+  <li>Form validation</li>
+  <li>Better user interface and user experience (UI/ UX)</li>
+  <li>Hosted this calculator via firebase <a href='https://mortgagepaymentcalculatorbysid.web.app/'>https://mortgagepaymentcalculatorbysid.web.app/</a></li>
+ </ul>
 
 ## Development server
 
