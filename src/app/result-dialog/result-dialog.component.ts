@@ -8,6 +8,7 @@ import { ResultDialogData } from '../mortgage-calculator/mortgage-calculator.com
   templateUrl: './result-dialog.component.html',
   styleUrls: ['./result-dialog.component.scss']
 })
+
 export class ResultDialogComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<ResultDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: ResultDialogData) {
@@ -20,14 +21,7 @@ export class ResultDialogComponent implements OnInit {
     {name: 'Total Interest Cost:', value: `$${this.totalInterestCost().toFixed(2)}`}
   ];
 
-  ngOnInit(): void {
-    console.log('data', this.data);
-    console.log('aprMonthly', this.aprRate());
-    console.log('numOfPayments', this.numOfPayments().toFixed(2));
-    console.log('interestPayments', this.interestPayments().toFixed(2));
-    console.log('mortgagePayment', this.mortgagePayment().toFixed(2));
-    console.log('totalInterestCost', this.totalInterestCost().toFixed(2));
-  }
+  ngOnInit(): void {}
 
   //Calculate APR Rate
   public aprRate(): number {
@@ -55,7 +49,7 @@ export class ResultDialogComponent implements OnInit {
   }
 
   // closing privacy policy dialog
-  public close(): void {
+  public onClose(): void {
     this.dialogRef.close();
   }
 }

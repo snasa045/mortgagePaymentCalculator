@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ResultDialogComponent } from '../result-dialog/result-dialog.component';
 
@@ -35,7 +33,7 @@ export class MortgageCalculatorComponent implements OnInit {
     {type: 'Weekly', value: 52}
   ];
 
-  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) { }
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog ) { }
 
   ngOnInit(): void {
     this.createForm();
