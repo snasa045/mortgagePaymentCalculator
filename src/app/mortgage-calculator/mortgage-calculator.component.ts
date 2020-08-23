@@ -3,14 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ResultDialogComponent } from '../result-dialog/result-dialog.component';
 
-export interface ResultDialogData {
-  mortgageAmount: number;
-  amortizationPeriod: number;
-  paymentFrequency: number;
-  interestRate: number;
-  totalInterestCost?: number;
-}
-
 @Component({
   selector: 'app-mortgage-calculator',
   templateUrl: './mortgage-calculator.component.html',

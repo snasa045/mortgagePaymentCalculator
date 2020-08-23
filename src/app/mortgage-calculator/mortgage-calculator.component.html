@@ -45,7 +45,7 @@
           <mat-form-field appearance="fill" class="form-element interest-rate-element">
             <mat-label>Interest Rate</mat-label>
             <span matPrefix>%&nbsp;</span>
-            <input matInput formControlName="interestRate" required>
+            <input matInput formControlName="interestRate" required type="number">
             <mat-error *ngIf="!formGroup.controls['interestRate'].valid && formGroup.controls['interestRate'].touched">
               {{ titleAlert }}
             </mat-error>
